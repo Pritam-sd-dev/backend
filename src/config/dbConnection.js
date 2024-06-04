@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 mongoose.set('strictQuery', false);
-const mongo_uri = 'mongodb+srv://root:root@cluster0.sn6zeyu.mongodb.net/twitter_db';
+const mongo_uri = 'mongodb://localhost:27017';
 const connectToDB = async () => {
     console.log(process.env.DATABASE_PASSWORD);
     const {connection} = await mongoose.connect(mongo_uri);

@@ -5,7 +5,7 @@ import connectToDB from './config/dbConnection.js';
 
 config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 
