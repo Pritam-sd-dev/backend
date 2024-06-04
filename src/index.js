@@ -3,6 +3,7 @@ import { config } from "dotenv";
 import cookieParser from "cookie-parser";
 import connectToDB from './config/dbConnection.js';
 import userRouter from './routes/user.route.js'
+import tweetRouter from './routes/tweet.route.js'
 
 config();
 
@@ -16,6 +17,7 @@ app.use(cookieParser());
 app.get('/ping', () => console.log("server is up and running"));
 
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/tweets', tweetRouter);
 
 app.all("*", (req, res) => {
     res.status(404).send("not found");

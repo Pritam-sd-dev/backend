@@ -15,7 +15,7 @@ export const reqisterUser = async (req, res)  => {
 
         res.status(200).json({status: true, message: 'user successfully registered :)'})
     } catch (error) {
-        res.status(503).json({status: false, message: 'something went wrong :(, please try again'})
+        res.status(503).json({status: false, message: 'something went wrong :(, please try again'});
     }
 }
 
