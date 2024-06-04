@@ -1,3 +1,4 @@
+import Tweet from "../models/tweet.model.js";
 import User from "../models/user.model.js";
 import bcrypt from 'bcryptjs'
 
@@ -43,6 +44,19 @@ export const login = async (req, res) => {
 
         res.status(200).json({status: true, message: 'successfully loggedIn :)'});
 
+    } catch (error) {
+        res.status(500).json({status: false, message: 'something went wrong :('});
+    }
+}
+
+export const getUserTimeline = async (req, res) => {
+    const {userId} = req.params;
+
+    // doubt
+    console.log(userId);
+    try {
+        const tweets = await Tweet.find({userId}).select('-userId');
+        res.status(200).json({status: true, message: '', data: {tweets}});
     } catch (error) {
         res.status(500).json({status: false, message: 'something went wrong :('});
     }
