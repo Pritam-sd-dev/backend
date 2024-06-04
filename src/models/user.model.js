@@ -8,7 +8,7 @@ const UserSchema = new Schema({
         required: true
     },
     password: {
-        type: true,
+        type: String,
         required: true
     }
 });
@@ -16,7 +16,7 @@ const UserSchema = new Schema({
 UserSchema.methods = {
     generateJwtToken: function() {
         return jwt.sign(
-            { id: this._id, email: this.email },
+            { id: this._id, username: this.username },
             process.env.JWT_SECRET,
             {
                 expiresIn: process.env.JWT_EXPIRY
