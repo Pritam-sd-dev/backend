@@ -79,7 +79,6 @@ export const getUserTimeline = async (req, res) => {
                 message: '', 
                 data: {
                     tweets,
-                    hasNextPage,
                     nextCursor: hasNextPage ? tweets[tweets.length - 1] : null,
                 }
             }
