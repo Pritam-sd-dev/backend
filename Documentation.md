@@ -85,3 +85,9 @@ The project is structured as follows:
 ## Authentication
 
 Basic user authentication is implemented using JWT tokens. Upon successful login, a JWT token is generated (will recieve inside a cookie) and must be included as the cookie of protected endpoints for authentication.
+
+## Setup
+-- just add environment variables in .env file
+- DATABASE_PASSWORD=root
+- JWT_SECRET=secret
+- JWT_EXPIRY=2d
