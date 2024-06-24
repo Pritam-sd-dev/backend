@@ -88,6 +88,6 @@ Basic user authentication is implemented using JWT tokens. Upon successful login
 
 ## Setup
 -- just add environment variables in .env file
-- DATABASE_PASSWORD=root
-- JWT_SECRET=secret
-- JWT_EXPIRY=2d
+- DATABASE_PASSWORD
+- JWT_SECRET
+- JWT_EXPIRY
