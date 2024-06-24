@@ -91,3 +91,4 @@ Basic user authentication is implemented using JWT tokens. Upon successful login
 - DATABASE_PASSWORD
 - JWT_SECRET
 - JWT_EXPIRY
+- DB_URL
